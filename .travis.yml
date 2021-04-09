@@ -1,0 +1,17 @@
+# superuser needed to run then rest 
+sudo: required
+# Need docker service installed
+services:
+  - docker
+
+# what needs to be done before running 
+# build an image using dockerfile.dev
+before_install:
+  - docker build -t angry-panda -f Dockerfile.dev . 
+
+#commands to run
+# run tests: coverage ensures that run test exists
+script:
+  - docker run angry-panda npm run test -- --coverage
+
+  
