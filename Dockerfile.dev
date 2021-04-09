@@ -7,6 +7,7 @@ RUN npm install
 
 # while docker-compose has the volume .:/app part this is not necessary
 COPY . .
+RUN chown -R node:node /app
 RUN chmod 755 /app
 
 CMD ["npm", "run", "start"]
