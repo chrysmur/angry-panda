@@ -15,3 +15,19 @@ before_install:
 script:
   - docker run -e  CI=true angry-panda npm run test
 
+
+# trvis is preconfigured to some provider such as DO or aws
+#region - where you created the aws  instance
+# travis will zip gitup code and copy it to s3. bucket_name is where the files will be stored
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "angry-panda"
+  env: "Angrypanda-env"
+  bucket_name: "elasticbeanstalk-us-east-2-416827867254"
+  bucket_path: "angry-panda"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
