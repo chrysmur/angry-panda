@@ -19,6 +19,8 @@ script:
 # trvis is preconfigured to some provider such as DO or aws
 #region - where you created the aws  instance
 # travis will zip gitup code and copy it to s3. bucket_name is where the files will be stored
+# adding secure here adds an additional header which can throw error as it is used in calculating the hash
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
@@ -29,4 +31,4 @@ deploy:
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY" # adding secure here adds an additional header used in c
+  secret_access_key: "$AWS_SECRET_KEY" 
