@@ -1,5 +1,5 @@
-import React from 'react';
-import MainNav from './navbar' 
+import React, {Component} from 'react';
+import MainNav from '../navbar/navbar' 
 
 class Home extends Component {
     constructor(props) {
