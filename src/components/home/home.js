@@ -9,7 +9,11 @@ class Home extends Component {
     render() { 
         return ( 
             <div className="container">
-                <MainNav />
+                <div>
+                    <h2>
+                        Welcome to Angry Panda
+                    </h2>
+                </div>
             </div>
         );
     }

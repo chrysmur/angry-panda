@@ -29,4 +29,4 @@ deploy:
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
+  secret_access_key: "$AWS_SECRET_KEY" # adding secure here adds an additional header which can throw error as it is used in calculating the hash
