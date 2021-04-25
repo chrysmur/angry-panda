@@ -4,3 +4,13 @@
     margin-left:15px;
     overflow: hidden;
 }
+
+#main-nav {
+    border-radius: 8;
+}
+
+.title-text {
+    height:85px;
+    margin-left:1px;
+}
+
