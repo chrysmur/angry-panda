@@ -2,9 +2,10 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import MainNav from "./components/navbar/navbar";
 import Home from "./components/home/home"
-// import { GlobalStyles } from "./components/theme/globalStyles";
-// import { lightTheme, darkTheme } from "./components/theme/Theme";
-// import { ThemeProvider } from "styled-components";
+
+import { GlobalStyles } from "./components/theme/globalStyles";
+import { lightTheme, darkTheme } from "./components/theme/Theme";
+import { ThemeProvider } from "styled-components";
 
 
 const App = () => {
@@ -15,14 +16,12 @@ const App = () => {
   };
 
   return (
-    //<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-     // <GlobalStyles />
-     <div className="App">
-        {/* <button onClick={themeToggler}>
-            {theme === "light" ? "dark" : "light"}
-        </button> */}
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+     <GlobalStyles />
+     <div className="App">   
         
-        <MainNav />
+        <MainNav themeToggler={themeToggler} theme={theme==="light"? "night":"light"}/>
+
         <Home />
       </div>
     // </ThemeProvider>

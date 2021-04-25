@@ -4,13 +4,8 @@ import logo from '../../static/logo.png'
 import "./navbar.css"
 
 
-class MainNav extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { ...props }
-    }
-    render() { 
-        return ( 
+const  MainNav =(props) => {
+    return ( 
             <Navbar bg="dark" text-color="light" expand="sm">
                 <Navbar.Brand href="#home"><img  className="d-inline-block align-top logo" src={logo} /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,14 +19,12 @@ class MainNav extends Component {
                         <NavDropdown.Item href="#action/3.4"> Lets Chat </NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
-                    <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-1" />
-                    <Button searchid= "search" variant="outline-info">Search</Button>
-                    </Form>
+                    { <button className="btn btn-light" onClick={props.themeToggler}>
+                        {props.theme}
+                    </button> }  
                 </Navbar.Collapse>
             </Navbar>
          );
-    }
 }
  
 export default MainNav;
