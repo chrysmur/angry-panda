@@ -6,6 +6,7 @@ import Home from "./components/home/home"
 import { GlobalStyles } from "./components/theme/globalStyles";
 import { lightTheme, darkTheme } from "./components/theme/Theme";
 import { ThemeProvider } from "styled-components";
+import {Container} from 'react-bootstrap'
 
 
 const App = () => {
@@ -18,13 +19,11 @@ const App = () => {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
      <GlobalStyles />
-     <div className="App">   
-        
+     <Container>
         <MainNav themeToggler={themeToggler} theme={theme==="light"? "night":"light"}/>
-
         <Home />
-      </div>
-    // </ThemeProvider>
+    </Container>  
+   </ThemeProvider>
   );
 };
 
