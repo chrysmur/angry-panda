@@ -8,16 +8,14 @@ class Home extends Component {
     render() { 
         return ( 
             <div className="container">
-                <Card className="intro bg-transparent border-transparent">
+                <Card className="bg-transparent border-transparent border-0">
                     <Card.Body>
-                        <Card.Title><h2 className=" text-center">Developers Hub</h2></Card.Title>
+                        <Card.Title><h2 className="text-info text-center"> Angry Panda Developer's Hub</h2></Card.Title>
+                    
+                        <Card.Text className="text-center">
+                        <i className="fas fa-walking"></i>This is our Journey 
+                        </Card.Text>
                     </Card.Body>
-                    <Card.Text className="text-center">
-                        This is AngryPanda. 
-                    </Card.Text>
-                    <Card.Text className="text-center">
-                        Learn with us...
-                    </Card.Text>
                 </Card>
 
                 <Row>
@@ -37,7 +35,7 @@ class Home extends Component {
                             <Card.Text>Redis, Apache Kafka, RabbitMQ  </Card.Text>
                             <hr/>
                             <Card.Title><strong>Others</strong></Card.Title>
-                            <Card.Text>ML, Data structures...  </Card.Text>
+                            <Card.Text>ML, Data structures and <a href="blog">much more </a>  </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -45,7 +43,7 @@ class Home extends Component {
                     <Card className="bg-secondary">
                             <Card.Body>
                             <Card.Title><strong>Journeys</strong></Card.Title>
-                            <Card.Text> We have been doing this stuff for s varying number years in various fields</Card.Text>
+                            <Card.Text> We have been doing this stuff for a varying number years in various fields, and we are not done yet...</Card.Text>
                             <hr/>
                             <Card.Text> See our individual journeys <a href="journey">here</a></Card.Text>
                             </Card.Body>
