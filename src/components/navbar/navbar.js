@@ -19,8 +19,10 @@ const  MainNav =(props) => {
                         <NavDropdown.Item href="#action/3.4"> Lets Chat </NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
-                    { <button className="btn btn-light" onClick={props.themeToggler}>
-                        {props.theme}
+                    { <button className="btn text-light" onClick={props.themeToggler}>
+                    {props.theme === "light"?<i className="btn btn-sm text-light fa fa-sun-o"></i>:<i className="btn btn-sm text-light fa fa-moon-o" aria-hidden="true"></i>
+                        }
+
                     </button> }  
                 </Navbar.Collapse>
             </Navbar>
