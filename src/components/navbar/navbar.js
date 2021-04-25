@@ -6,13 +6,14 @@ import "./navbar.css"
 
 const  MainNav =(props) => {
     return ( 
-            <Navbar id="main-nav" text-color="light" variant="transparent" expand="sm">
-                <Navbar.Brand href="#home"><img  className="d-inline-block align-top logo" src={logo} /></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar collapseOnSelect expand="sm" id="main-nav" text-color="light" variant="transparent" bg="inverse" expand="md">
+                <Navbar.Brand href="#home"><img  className="d-inline-block align-top logo" src={logo} />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="simple-navbar-nav"><i className= "fa fa-align-justify"></i></Navbar.Toggle>
+                <Navbar.Collapse id="simple-navbar-nav">
                     <Nav className="ml-auto">
-                    <Nav.Link href="#home"><strong className="text-primary">Home</strong></Nav.Link>
-                    <Nav.Link href="#home"><strong className="text-primary">Blog</strong></Nav.Link>
+                    <Nav.Link href="#home"><strong className="text-primary"><i className="fa fa-home"></i>Home</strong></Nav.Link>
+                    <Nav.Link href="#blog"><strong className="text-primary"><i className="fas fa-blog fa-spin"></i>Blog</strong></Nav.Link>
                     <NavDropdown title="Journey" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Sabonis</NavDropdown.Item>
                         <NavDropdown.Divider />
@@ -22,8 +23,8 @@ const  MainNav =(props) => {
                     </NavDropdown>
                     </Nav>
                     <Button size='sm' variant="transparent" onClick={props.themeToggler}>
-                        {props.theme === "light"?<i className="text-light fa fa-sun-o"></i>:
-                        <i className="text-dark fa fa-moon-o" aria-hidden="true"></i>}
+                        {props.theme === "light"?<i className="text-light fa fa-toggle-on"></i>:
+                        <i className="text-dark fa fa-toggle-off" aria-hidden="true"></i>}
                     </Button> 
                 </Navbar.Collapse>
             </Navbar>

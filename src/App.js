@@ -10,7 +10,7 @@ import {Container} from 'react-bootstrap'
 
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -20,7 +20,7 @@ const App = () => {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
      <GlobalStyles />
      <Container>
-        <MainNav themeToggler={themeToggler} theme={theme==="light"? "night":"light"}/>
+        <MainNav themeToggler={themeToggler} theme={theme==="light"? "dark":"light"}/>
         <Home />
     </Container>  
    </ThemeProvider>
