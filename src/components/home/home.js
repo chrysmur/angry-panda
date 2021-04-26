@@ -16,10 +16,10 @@ class Home extends Component {
                         <Card.Title><h2 className="text-info text-center"> Angry Panda Developer's Hub</h2></Card.Title>
                     
                         <Card.Text className="text-center">
-                            <div style={{background:'black'}}>
+                            <div style={{}}>
                                 <TextAnimation>
-                                    <span style = {{ color:"yellow"}}>{"$>"}</span>
-                                    <strong style={{ color:'green' }}>npm run start</strong>
+                                    <span style = {{ color:"yellow", background:'black'}}>$ </span>
+                                    <strong style={{ color:'green', background:'black' }}>npm run start</strong>
                                 </TextAnimation>
                             </div>
                         </Card.Text>
@@ -40,11 +40,11 @@ class Home extends Component {
                                 <Card.Title><strong className="text-info">Databases / KV stores</strong></Card.Title>
                                 <Card.Text>Postgresql, Mysql, MongoDB, Cassandra, Redis </Card.Text>
                                 <hr/>
-                                <Card.Title><strong className="text-info">Design tools</strong></Card.Title>
-                                <Card.Text>Redis, Apache Kafka, RabbitMQ  </Card.Text>
+                                <Card.Title><strong className="text-info">Tools</strong></Card.Title>
+                                <Card.Text>Redis, Apache Kafka, RabbitMQ, Docker, Kubernetes, TravisCI, Jenkins, CircleCI, Git  </Card.Text>
                                 <hr/>
                                 <Card.Title><strong className="text-info">Others</strong></Card.Title>
-                                <Card.Text>ML, Data structures and <a href="blog">much more </a>  </Card.Text>
+                                <Card.Text>Machine Learning,Hadoop, Apache Spark, Apache Storm <a href="blog">much more </a>  </Card.Text>
                             </TextAnimation>
                             </Card.Body>
                         </Card>
@@ -60,6 +60,7 @@ class Home extends Component {
                             </TextAnimation>
                             </Card.Body>
                         </Card>
+                        <hr/>
                         <Card className="bg-transparent">
                             <Card.Body>
                             <TextAnimation charInterval="40">
