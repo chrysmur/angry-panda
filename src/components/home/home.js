@@ -18,7 +18,7 @@ class Home extends Component {
                         <Card.Text className="text-center">
                             <div style={{background:'black'}}>
                                 <TextAnimation>
-                                    <span style = {{ color:"yellow"}}>$ </span>
+                                    <span style = {{ color:"yellow"}}>{"$>"}</span>
                                     <strong style={{ color:'green' }}>npm run start</strong>
                                 </TextAnimation>
                             </div>
@@ -62,7 +62,7 @@ class Home extends Component {
                         </Card>
                         <Card className="bg-transparent">
                             <Card.Body>
-                            <TextAnimation charInterval="">
+                            <TextAnimation charInterval="40">
                                 <Card.Title><strong className="text-info">Rookie Corner</strong></Card.Title>
                                 <Card.Text> Yeah, it can be tough to start</Card.Text>
                                 <hr/>
