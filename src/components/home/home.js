@@ -13,13 +13,14 @@ class Home extends Component {
             <div className="container">
                 <Card className="bg-transparent border-transparent border-0">
                     <Card.Body>
-                        <Card.Title><h2 className="text-info text-center"> Angry Panda Developer's Hub</h2></Card.Title>
+                        
                     
                         <Card.Text className="text-center">
                             <div style={{}}>
-                                <TextAnimation>
-                                    <span style = {{ color:"yellow", background:'black'}}>$ </span>
-                                    <strong style={{ color:'green', background:'black' }}>npm run start</strong>
+                                <TextAnimation charInterval="">
+                                        <Card.Title>
+                                            <h2 className="text-info text-center"> Developer's Hub</h2>
+                                        </Card.Title>
                                 </TextAnimation>
                             </div>
                         </Card.Text>
@@ -43,8 +44,8 @@ class Home extends Component {
                                 <Card.Title><strong className="text-info">Tools</strong></Card.Title>
                                 <Card.Text>Redis, Apache Kafka, RabbitMQ, Docker, Kubernetes, TravisCI, Jenkins, CircleCI, Git  </Card.Text>
                                 <hr/>
-                                <Card.Title><strong className="text-info">Others</strong></Card.Title>
-                                <Card.Text>Machine Learning,Hadoop, Apache Spark, Apache Storm <a href="blog">much more </a>  </Card.Text>
+                                <Card.Title><strong className="text-info">Data</strong></Card.Title>
+                                <Card.Text>Machine Learning,Hadoop, Apache Spark, Apache Storm, and <a href="blog">much more </a> </Card.Text>
                             </TextAnimation>
                             </Card.Body>
                         </Card>
