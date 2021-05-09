@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import MainNav from "./components/navbar/navbar";
 import Home from "./components/home/home"
+import Profile from "./components/profiles/profiles"
 
 import { GlobalStyles } from "./components/theme/globalStyles";
 import { lightTheme, darkTheme } from "./components/theme/Theme";
@@ -21,7 +22,7 @@ const App = () => {
      <GlobalStyles />
      <Container>
         <MainNav themeToggler={themeToggler} theme={theme==="light"? "dark":"light"}/>
-        <Home />
+        <Profile />
     </Container>  
    </ThemeProvider>
   );
