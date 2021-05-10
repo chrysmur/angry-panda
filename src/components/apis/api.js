@@ -11,7 +11,7 @@ const profileData = {
             title: "Software engineer",
             start: "1-8-2017",
             end: "7-8-2020",
-            Role: ["Create and maintain database designs",
+            roles: ["Create and maintain database designs",
                     "Created API for the user app using Nodejs",
                     "Created user app for the same app",
             ],
@@ -19,7 +19,23 @@ const profileData = {
                 "python",
                 "JS",
                 "Ruby"
-            ]
+            ],
+        },
+        {
+            company: "Atomic Idiot",
+            title: "Fullstack",
+            start: "1-9-2020",
+            end: "1-1-2021",
+            roles: ["Worked with a team of 3 to create the backend using Ruby on rails",
+                    "Created the CI pipeline for deployment",
+                    "Wrote tests for the Node JS app",
+                    "Created the data pipeline for analytics using Apache storm"
+            ],
+            stack: [
+                "python",
+                "JS",
+                "Ruby"
+            ],
         }
     ]
 }
