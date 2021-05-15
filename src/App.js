@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import MainNav from "./components/navbar/navbar";
 import Home from "./components/home/home"
 import Profile from "./components/profiles/profiles"
+import BlogHome from "./components/blog/blogHome"
 
 import { GlobalStyles } from "./components/theme/globalStyles";
 import { lightTheme, darkTheme } from "./components/theme/Theme";
@@ -22,7 +23,7 @@ const App = () => {
      <GlobalStyles />
      <Container>
         <MainNav themeToggler={themeToggler} theme={theme==="light"? "dark":"light"}/>
-        <Profile />
+        <BlogHome />
     </Container>  
    </ThemeProvider>
   );

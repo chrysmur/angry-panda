@@ -8,7 +8,7 @@ import  {getProfile} from '../apis/api'
 const Profile = (username) => {
     const {profileData} = getProfile(username)
     return ( 
-        <Container>
+        <div className="container">
             <Row>
             <Card className="bg-transparent  border-0" style={{width:"40rem"}}>
                 <Card.Header>
@@ -43,7 +43,7 @@ const Profile = (username) => {
                 <i className="text-info fa fa-twitter"/>
             </Card>
             </Row>
-            </Container>
+            </div>
         );
     }
  

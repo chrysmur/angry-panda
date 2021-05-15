@@ -1,5 +1,17 @@
 import axios from 'axios';
 
+const allProfiles = [
+    {
+        name:"kris sabonis",
+        title: "UI/UX Eng",
+        image: ""
+    },
+    {
+        name:"Tyline Omar",
+        title: "UI",
+        image: "Software Engineer"
+    }
+]
 const profileData = {
     name: "kris sabonis",
     image: "https://lh3.googleusercontent.com/ogw/ADGmqu_O51d_kfpwwyinw7rb3kYYYAL7mmb1N82IZIvkmQ=s83-c-mo",
@@ -39,9 +51,26 @@ const profileData = {
         }
     ]
 }
+const allBlog = [
+    {
+        title:"introduction to Py",
+        content:" A lot of junk information that nobody wants to know about",
+        tags: ["python", "programming"],
+        dateUpdated: "1-3-2021",
+        author: "kris sabonis"
 
+    },
+    {
+        title:"Python for signal processing",
+        content:" this is a blog about how I became a python programmer. The journey began when in the field of gnu radio when I needed to process some sounds from  a system we were working on.",
+        tags: ["python", "programming"],
+        dateUpdated: "1-3-2021",
+        author:"Kung Lao"
+
+    }
+]
 let ENV = "UIDEV"
-const getProfile = (username) => {
+export const getProfile = (username) => {
     if(ENV === "UIDEV"){
         return {
             status: 200,
@@ -50,15 +79,52 @@ const getProfile = (username) => {
     } else {
         axios({
             method: "POST",
-            url: "angry-panda/v1/profiles",
+            url: `angry-panda/v1/profiles/${username}`,
             data: { username },
         }).then(response => {
             return {
                 status: 200,
-                response
+                profileData: response.data
+            }
+        })
+    }
+}
+export const getAllBlog = () => {
+    if(ENV === "UIDEV") {
+        return {
+            status:200,
+            allBlog
+        }
+    } else{
+        axios({
+            method: "GET",
+            url:"angry-panda/v1/blogs",
+        }).then(response=> {
+            return {
+                status:  200,
+                allBlog:response.data
+
             }
         })
     }
 }
 
-export {getProfile}
+export const getAllProfiles = () => {
+    if(ENV === "UIDEV") {
+        return {
+            status:200,
+            allProfiles
+        }
+    } else{
+        axios({
+            method: "GET",
+            url:"angry-panda/v1/profiles",
+        }).then(response=> {
+            return {
+                status:  200,
+                allBlog:response.data
+
+            }
+        })
+    }
+}
